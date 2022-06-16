@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strReceived: 
+  delay: {x: 0, y: 0, z: 0, w: 0}
   strData:
   - 
   - 
@@ -177,6 +178,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.6290796, y: 14.518617, z: -2.4080558}
   m_LocalScale: {x: 0.9672191, y: 0.64955944, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4365830127196229447}
   m_RootOrder: 10
@@ -270,6 +272,7 @@ Transform:
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -351,13 +354,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.24932916, y: 0.016647555, z: -0.004286756, w: 0.96826625}
-  m_LocalPosition: {x: 2.47, y: 6.36, z: -10}
+  m_LocalRotation: {x: -0.16602652, y: 0.34487048, z: -0.38007334, w: 0.84204745}
+  m_LocalPosition: {x: -4, y: 2, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 28.88, y: 1.97, z: 0}
+  m_LocalEulerAnglesHint: {x: -1, y: 45, z: -49}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,7 +375,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketTransform: {fileID: 4365830127196229447}
-  delay: {x: -0.09, y: 2.2, z: -3.65}
+  delay_p: {x: -4, y: 2, z: -3}
+  delay_r: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1366513280
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +405,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1835307181}
   m_RootOrder: 0
@@ -513,6 +519,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -545,6 +552,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1835307181}
   m_RootOrder: 1
@@ -686,6 +694,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1366513281}
   - {fileID: 1650232721}
@@ -715,7 +724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2016083004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -787,8 +796,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2016083003}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -45.71, y: 0.28, z: -44.48}
+  m_LocalPosition: {x: 0, y: -14.51, z: 0}
+  m_LocalScale: {x: -607.5, y: 0.7, z: -131.38}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -806,15 +816,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6475635639216724623, guid: 71c2a698e2d618b488a9f414972d05b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.84
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6475635639216724623, guid: 71c2a698e2d618b488a9f414972d05b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.66
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6475635639216724623, guid: 71c2a698e2d618b488a9f414972d05b1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.67
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6475635639216724623, guid: 71c2a698e2d618b488a9f414972d05b1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -889,6 +899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strReceived: 
+  delay: {x: 90, y: 0, z: 90, w: 0}
   strData:
   - 
   - 

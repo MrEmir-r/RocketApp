@@ -4,9 +4,9 @@ using System.IO.Ports;
 public class Gyroscope : MonoBehaviour
 {
     //public GameObject rocket;
-    SerialPort stream = new SerialPort("COM10", 115200);
+    SerialPort stream = new SerialPort("COM7", 115200);
     public string strReceived;
-
+    public Vector4 delay;
     public string[] strData = new string[4];
     public string[] strData_received = new string[4];
     public float qw, qx, qy, qz;
@@ -27,7 +27,7 @@ public class Gyroscope : MonoBehaviour
 
 
         strReceived = stream.ReadLine(); //Read the information  
-
+        transform.position = Vector3.one;
         strData = strReceived.Split(',');
         if (strData[0] != "" && strData[1] != "" && strData[2] != "" && strData[3] != "")//make sure data are reday
         {
@@ -41,13 +41,13 @@ public class Gyroscope : MonoBehaviour
             qy = float.Parse(strData_received[2]);
             qz = float.Parse(strData_received[3]);
 
-            transform.rotation = new Quaternion(-qy, -qz, qx, qw);
+            transform.rotation = new Quaternion(qy+delay.y, qz+delay.z, qx+delay.x, qw+delay.w);
 
         }
     }
 
-    private Quaternion GyroToUnity(Quaternion q)
+    /*on GyroToUnity(Quaternion q)
     {
-        return new Quaternion(q.x, q.y, -q.z, -q.w);
-    }
+        return new Quaternion(q.x, q.y,-q.z,-q.w);
+    }*/
 }
